@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Virtual Reality Car Drive Stimulation</title>
+</head>
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+<script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
+
+<body>
+    <a-scene id="scene" inspector-plugin-recast background="color:beige;">
+    <a-assets>
+        <a-asset-item id="city" src="./assets/low_poly_city/scene.gltf"></a-asset-item>
+        <a-asset-item id="wheel" src="./assets/steering_wheel/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity id="citySet" gltf-model="#city" position="10 -2 -150" rotation="0 90 0" scale="1 1 1"></a-entity>
+    <a-entity id="steeringWheel" gltf-model="#wheel" position="0.13 1 -0.163" scale="0.01 0.01 0.01" rotation="0 0 0"></a-entity>
+    <a-box id="accelerator" src="./assets/acc.png" position="0.10 1 -0.163" rotation="0 0 0" scale="1 1 1"></a-entity>
+    <a-box id="Brake" src="./assets/break.png" position="-0.15 1 -0.163" rotation="0 0 0" scale="1 1 1"></a-entity>
+    </a-scene>
+</body>
+</html>
